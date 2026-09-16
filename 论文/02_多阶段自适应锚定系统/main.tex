@@ -1,0 +1,208 @@
+% !TeX program = pdflatex
+% !TeX encoding = UTF-8
+% P2：基于全过程可行性理论的碎石堆小行星多阶段自适应锚定系统设计与验证。
+% 当前状态：研究规划；机构、传感器、算法、样机和性能均未确定。
+% 本篇把机构、状态识别和自适应部署作为一个系统贡献，不另拆控制论文。
+% 候选结构（微棘、展开锚等）只在文献/理论筛选后确定，不能在规划阶段写成成果。
+%
+% 候选假设：
+% H1 P1 指导的协同设计在匹配资源下提高全过程联合成功率。
+% H2 实际可测信号对至少部分关键锚定状态具有增量信息。
+% H3 自适应流程相对公平调优的固定流程产生有意义的净收益。
+% H4 P1 能预测实际系统的瓶颈与失效边界。
+% 允许：简单固定流程已足够、状态不可辨识、适应代价抵消收益、P1 遗漏状态。
+%
+% 图路线：F01 理论到需求；F02 系统；F03 标定；F04 可识别性；F05 策略；
+% F06 对照/消融；F07 联合成功；F08 理论—实验检验。
+
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\setlength{\emergencystretch}{2em}
+
+\title{Design and Validation of a Staged Adaptive Anchoring System\\
+for Rubble-Pile Asteroids Guided by Process-Feasibility Theory}
+\author{Authors to be confirmed}
+\date{Planning manuscript --- evidence pending}
+
+\newcommand{\planned}[1]{\par\noindent\textit{Planned work: #1}\par}
+\newcommand{\figureplaceholder}[1]{%
+  \fbox{\parbox{0.91\linewidth}{\centering
+  \vspace{0.018\textheight}\textbf{Planned evidence --- no results yet}\par
+  \smallskip #1\par\vspace{0.018\textheight}}}}
+\newif\ifBibliographyReady
+\BibliographyReadyfalse
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This planning manuscript concerns a staged adaptive anchoring system for
+uncertain rubble-pile asteroid surfaces. The proposed work will translate a
+process-feasibility theory into mechanism, sensing, state assessment, and
+deployment requirements, then evaluate the complete transition from initial
+contact to task loading against fixed procedures and simplified architectures.
+The mechanism, observability, adaptation benefit, and achievable reliability
+remain open questions; no system capability is reported here.
+\end{abstract}
+
+\section{System problem and contribution}
+% 科学/工程问题：如何把 P1 的路径可行性落实为真实机构和动作？
+% 创新定位：机构—感知—部署协同，而非三个并列模块。与已有微棘+钻进、展开锚、
+% 力封闭等逐项比较；不能把“组合已有机构”本身当创新。
+% 与 P0：使用任务硬约束和同场景评分；与 P3：机械与液桥路线分开评价。
+\planned{Verify the closest prior mechanisms and adaptive deployment methods.
+State which design decisions are derived from P1, what is newly implemented,
+and which independent evidence will establish a system-level contribution.}
+
+\section{Requirements derived from process feasibility}
+% 建立追溯表：P1 理论约束 → 功能 → 机构/传感/动作需求 → 验证方法。
+% 包含各阶段力/矩、行程、位姿、速率、时间、能量、失效检测和安全退出。
+% 若 P1 尚无具体约束，不能声称“理论指导设计”。
+\planned{Translate stage-capacity, transition, uncertainty, and resource
+constraints into quantitative requirements. Preserve alternatives until theory
+and evidence distinguish them.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F01: Traceable mapping from P1 constraints to mechanism,
+sensor, actuator, transition, verification, and resource requirements.}
+\caption{Planned theory-to-system requirements map.}
+\end{figure}
+
+\section{Mechanism and system architecture}
+% 选择具体实现：初步接触/稳固、主连接、载荷转移、释放/重试。说明反力闭合，
+% 被抓块石不等于固定世界；台架/线缆不能暗中提供不存在的反力。
+% 完整报告质量、尺寸、行程、驱动力、功率、能量、热和耗材。
+\planned{Select and size a realizable mechanism using the requirement map.
+Describe all degrees of freedom, load paths, support bodies, actuators, sensors,
+power, computation, release, and retry capabilities.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F02: Mechanism, sensors, actuators, free-body diagrams,
+state sequence, load transfer, and actual support boundaries.}
+\caption{Planned integrated architecture and anchoring sequence.}
+\end{figure}
+
+\section{Models, prototype, and calibration}
+% 建模层级：机构多体+颗粒/块石+飞行器自由度。先单元、守恒、接触标定、执行器
+% 受载标定；再全过程。固定基座仅作组件试验，不代表系统验证。
+% 地面试验记录整床重力、围压、边界、支撑/线缆力和传感误差。
+\planned{Develop only the models needed to predict stage and transition behavior.
+Separate code verification, material and actuator calibration, and independent
+physical validation. Document all external supports and gravity limitations.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F03: Component benchmarks, actuator calibration, sensor
+uncertainty, numerical convergence, and matched model--prototype comparisons.}
+\caption{Planned credibility evidence before system claims.}
+\end{figure}
+
+\section{Anchoring states and observability}
+% 候选状态：未接触、反弹/滑移、有效初步稳固、支撑体移动、进入、浅层卡滞、
+% 展开/连接、有效互锁、过载、载荷转移、证明加载通过/失败等。
+% 输入只能用实际可测的力、位移、电流、振动、姿态、视觉等；不能暗用 DEM 真值。
+% 先测试信号信息量和歧义，再选阈值/物理估计/统计或学习方法。
+\planned{Define decision-relevant states and ground truth, quantify which states
+are distinguishable with realizable sensors, and identify cases that require
+additional probing or an explicit uncertain decision.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F04: Signal distributions, state ambiguity, calibration,
+sensor ablation, out-of-domain detection, and dangerous false-pass cases.}
+\caption{Planned state observability and recognition evidence.}
+\end{figure}
+
+\section{Adaptive deployment and proof loading}
+% 决策：继续、停、调速/顺序/幅度、探测、证明加载、回退、释放/重试。
+% 每项动作必须机构可执行；重试不是默认能力。证明加载会改变颗粒状态，需评估损伤。
+% 目标在可行域外时拒绝，不强行跟踪。复杂算法必须优于简单阈值。
+\planned{Construct a constrained policy only after establishing observability and
+action feasibility. Specify transition guards, saturation, uncertainty handling,
+proof-load logic, recovery, release, and the cost of probing.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F05: State--action logic and representative transitions,
+including successful transfer, controlled rejection, retry, and unsafe failure.}
+\caption{Planned adaptive deployment and load-transfer method.}
+\end{figure}
+
+\section{Evaluation protocol and baselines}
+% 主指标：全过程联合成功，包含阶段转换、力/矩/位姿、资源、最终目标载荷。
+% 基准：只优化最终承载；无初步稳固；相同机构固定流程；简单阈值；完整系统；
+% 必要时真状态上界。匹配质量/能量/时间/传感/尝试数/初态。
+% 独立单位：颗粒床/材料批次/块石或表面样本/完整运行，非帧或颗粒。
+Define success as the joint event that all required transitions occur, stage
+wrench and pose constraints remain satisfied, resource budgets are respected,
+permitted support transfer is completed, and the final task or proof load is
+survived without unrecovered rebound, drift, overturning, detachment, or damage.
+
+\planned{Pre-register failure classes, minimum meaningful improvement, repeats,
+stopping rules, exclusions, and grouped train/tune/test separation. Compare the
+complete system with matched fixed and ablated baselines.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F06: Fixed procedure, simple threshold, mechanism ablations,
+sensor ablations, ideal-state upper bound, and complete adaptive system under
+matched resources and initial conditions.}
+\caption{Planned fair comparisons and component attribution.}
+\end{figure}
+
+\section{Planned system results}
+% 报告所有尝试，不只成功样本。主结果：联合成功率及区间；辅助：阶段成功、
+% 安装力/矩、承载低分位、错误放行/拒绝/不确定拒判、资源和恢复性。
+% 自适应若不优于固定方案，保留结果并收缩主张。
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F07: Joint success distributions, stage bottlenecks,
+dangerous failures, conservative holding capacity, resource use, and recovery.}
+\caption{Planned complete-process performance and failure accounting.}
+\end{figure}
+
+\section{Test of the P1 theory}
+% 用冻结的 P1 预测对 P2 独立条件验算，不能先看 P2 再调整边界并称预测成功。
+% 区分 P1 变量不可测、参数误差、遗漏状态、机构特有失效。
+\planned{Freeze selected P1 predictions before final P2 tests. Compare predicted
+and observed feasibility boundaries, bottleneck stages, load-transfer failures,
+and staged benefit; retain discrepancies and update claims transparently.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P2-F08: Pre-specified P1 boundaries versus independent system
+tests, including correct predictions, calibration error, and structural failure.}
+\caption{Planned external test of process-feasibility theory.}
+\end{figure}
+
+\section{Completion and stop conditions}
+% 成篇：理论到设计可追溯；真实机构；关键状态部分可识别；自适应有净收益或获得
+% 有价值的不可辨识边界；完整独立验证；检验 P1 非平凡预测。
+% 止损：仅固定基座有效→修正载荷闭合；不可辨识→先改物理探测/机构；复杂策略无
+% 增益→保留简单规则；P1 无约束→不声称理论指导。
+\planned{Proceed as a full system paper only when mechanism, sensing, decision,
+and process evidence form one traceable contribution. Reduce the method claim
+when a simpler rule performs equivalently, and do not conceal failed deployment.}
+
+\section*{Data and software availability}
+\planned{Archive CAD and hardware versions, calibration records, simulation and
+control code, raw complete-run data, grouped splits, failures, and figure scripts.}
+
+\ifBibliographyReady
+  \bibliographystyle{plain}
+  \bibliography{references}
+\else
+  \section*{References to verify}
+  Verified literature and a configuration-level comparison will be added before
+  the architecture and novelty claims are frozen.
+\fi
+
+\end{document}

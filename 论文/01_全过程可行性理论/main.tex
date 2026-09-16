@@ -1,0 +1,238 @@
+% !TeX program = pdflatex
+% !TeX encoding = UTF-8
+% P1：碎石堆小行星表面从初步接触到稳固锚定的分阶段力学与全过程可行性理论。
+% 当前状态：研究规划；尚未建立经验证的理论或科学结论。
+% 本篇不提出具体机构。微棘、钻进、展开、胶黏和液桥均只能作为可能的功能实现，
+% 不能写入通用理论的前提。
+%
+% 核心主张候选：
+% H1 最终承载能力不是全过程可行的充分条件；必须存在连续可行路径。
+% H2 安装载荷与最终承载存在竞争，因此可能有全过程最优区间。
+% H3 阶段分别可行不代表载荷转移可行，历史与状态继承形成附加约束。
+% H4 分阶段方案仅在扩展可行域的收益超过资源和新增风险时有净优势。
+% H0 峰值反力与最终强度等简单判据已足够，路径理论没有新增预测信息。
+%
+% 成篇门槛：可计算/判定的路径问题 + 非平凡规律 + 竞争解释 + 独立条件检验
+% + 可传递给 P2 的定量设计约束。若只是流程图或串联系统可靠度，则并入 P2。
+% 图路线：F01 状态/载荷；F02 承载集合；F03 载荷转移；F04 可行域；
+% F05 单/多阶段比较；F06 不确定性/瓶颈；F07 留出与极限检验。
+
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\title{A Staged Mechanics and Process-Feasibility Framework\\
+from Initial Contact to Stable Anchoring on Rubble-Pile Asteroids}
+\author{Authors to be confirmed}
+\date{Planning manuscript --- evidence pending}
+
+\newcommand{\planned}[1]{\par\noindent\textit{Planned work: #1}\par}
+\newcommand{\figureplaceholder}[1]{%
+  \fbox{\parbox{0.91\linewidth}{\centering
+  \vspace{0.018\textheight}\textbf{Planned evidence --- no results yet}\par
+  \smallskip #1\par\vspace{0.018\textheight}}}}
+\newif\ifBibliographyReady
+\BibliographyReadyfalse
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This planning manuscript formulates asteroid anchoring as a staged path-
+feasibility problem rather than a terminal holding-strength problem. The proposed
+framework represents contact, provisional stabilization, primary connection,
+load transfer, and task loading through state-dependent wrench-capacity sets,
+dynamics, resources, and uncertain terrain. It will test when independently
+feasible stages fail to form a continuous process and when staging provides a net
+advantage over a single-stage design. No general criterion or scientific result
+has yet been established.
+\end{abstract}
+
+\section{Problem statement and contribution boundary}
+% 科学问题：从接触到作业承载何时存在连续可行路径？为什么只看最终抗拔会误判？
+% 与 P0：P0 定义任务/指标；P1 建立物理路径判据。
+% 与 P2：P1 不设计机构；P2 用实际机构、传感和动作检验 P1。
+% 完成条件：通过文献核实，说明与抓取稳定性、混杂系统可达性、可靠度及锚定
+% 文献的差异；不能只因应用于小行星就宣称创新。
+\planned{Define the scientific gap relative to terminal anchor capacity,
+grasp-wrench stability, hybrid-system reachability, and reliability analysis.
+State the minimum new prediction that would justify an independent theory paper.}
+
+\section{Stages, states, and environment}
+% 候选阶段：S0 自由接近；S1 接触/冲量；S2 初步稳固；S3 主连接建立；
+% S4 载荷转移；S5 作业锚定。审核决定是否将接近碰撞纳入本篇。
+% 状态包括机体位置/姿态/速度、接触、支撑分配、地表内部状态和资源。
+% 地表不是固定参数：前序动作会重排、压实、破坏或增强介质。
+\planned{Specify the hybrid stages, continuous state, transition guards,
+failure states, terminal task set, environmental uncertainty, and which terrain
+variables evolve during anchoring. Distinguish a functional stage from a physical
+mechanism that may implement it.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F01: Generic states from approach/contact through provisional
+support, primary connection, load transfer, and sustained task loading. Show
+external wrenches, allowed motion, terrain state, resources, and failure exits.}
+\caption{Planned process definition and load paths without a specific mechanism.}
+\end{figure}
+
+\section{Stage capacity and demand}
+% 用六维广义力保留方向和力矩，不把临时附着写成单一“100 N”。
+% 承载集合依赖状态、方向、持续时间、介质、载荷历史；需求来自碰撞、安装、
+% 载荷转移和作业。单时刻静态集合只是必要条件，不能证明动态可达。
+Define the required wrench as
+\begin{equation}
+\boldsymbol{w}(t)=
+\begin{bmatrix}
+\boldsymbol{F}(t)\\
+\boldsymbol{M}(t)
+\end{bmatrix},
+\end{equation}
+and let $\mathcal{C}_k(\boldsymbol{x},\boldsymbol{\theta},\boldsymbol{h})$
+denote the admissible wrench set in stage $k$, where $\boldsymbol{x}$ is the
+system state, $\boldsymbol{\theta}$ describes uncertain terrain, and
+$\boldsymbol{h}$ contains relevant loading and preparation history. A necessary
+instantaneous condition is
+\begin{equation}
+\boldsymbol{w}(t)\in
+\mathcal{C}_k(\boldsymbol{x},\boldsymbol{\theta},\boldsymbol{h}).
+\end{equation}
+
+\planned{Derive minimal capacity representations, limiting cases, and measurable
+parameters. Identify when scalar strength, ellipsoidal envelopes, or non-convex
+history-dependent sets are justified.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F02: Directional force--moment demand and state-dependent
+capacity sets for canonical stages, including duration and history effects.}
+\caption{Planned distinction between stage demand and available capacity.}
+\end{figure}
+
+\section{Transition and load-transfer feasibility}
+% 初步支撑与主连接共同承载时：w=w_temp+w_main。但集合瞬时相加不保证存在
+% 连续分配路径；动作、速率、位姿、退化与接触丢失需要同时满足。
+% 研究反例：两个端点都稳定，但转移中间必经不可行状态。
+During transfer, write
+\begin{equation}
+\boldsymbol{w}=
+\boldsymbol{w}_{\mathrm{temp}}+\boldsymbol{w}_{\mathrm{main}},
+\end{equation}
+subject to the capacity, dynamics, rate, resource, and state constraints of both
+connections. Instantaneous membership in a combined set is not by itself proof
+that a continuous transfer path exists.
+
+\planned{Formulate transition feasibility and construct canonical cases that
+separate endpoint stability from path feasibility. Include support degradation,
+terrain evolution, and allowable release of provisional support.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F03: Feasible and infeasible load-transfer paths between
+provisional and primary support, including an endpoint-feasible counterexample.}
+\caption{Planned evidence for the distinction between stable stages and a stable
+transition.}
+\end{figure}
+
+\section{Process feasibility and viability}
+% 目标：存在 x(t),u(t),阶段序列，使动力学、承载、状态、资源约束成立，终端进入
+% 稳固集合。需要选择适当理论工具（可行性/可达性/混杂系统/最优控制），不为数学
+% 形式而增加复杂度。给出可计算的简化与误差/保守性。
+The process is feasible when there exist a state path $\boldsymbol{x}(t)$,
+admissible action $\boldsymbol{u}(t)$, and stage sequence $k(t)$ such that
+\begin{equation}
+\dot{\boldsymbol{x}}=f_{k(t)}(\boldsymbol{x},\boldsymbol{u},\boldsymbol{\theta}),
+\quad
+g_{k(t)}(\boldsymbol{x},\boldsymbol{u},\boldsymbol{\theta})\leq 0,
+\quad
+\boldsymbol{x}(T)\in\mathcal{X}_{\mathrm{stable}}.
+\end{equation}
+
+\planned{Define a tractable feasibility or viability test and verify it against
+analytical limiting cases and independently implemented numerical checks. Compare
+with terminal-capacity and peak-reaction criteria.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F04: Process-feasibility region against installation demand,
+terminal capacity, support capability, and resource limits. Show conditions where
+higher terminal strength reduces total feasibility.}
+\caption{Planned installation--holding tradeoff and process-optimal region.}
+\end{figure}
+
+\section{When does staging help?}
+% 定义公平的单阶段基线。分阶段收益须扣除临时支撑的质量、能量、时间、扰动、
+% 传感与新增失效风险。提炼无量纲组或规范化边界，不锁定具体机构。
+\planned{Compare staged and single-stage canonical systems under matched resource
+and task constraints. Derive the conditions under which provisional support adds
+net feasibility, merely shifts the bottleneck, or makes the process worse.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F05: Normalized staged-versus-single-stage benefit map,
+including added mass, time, energy, disturbance, and failure opportunities.}
+\caption{Planned conditions for a net benefit from staging.}
+\end{figure}
+
+\section{Uncertainty, reliability, and bottlenecks}
+% 地表适用、部署、转移、保持是条件事件，通常相关；不简单相乘独立概率。
+% 输出联合成功概率/保守边界、阶段瓶颈、信息价值。定义输入分布来源与域外条件。
+\planned{Propagate correlated terrain and model uncertainty through the complete
+path. Compare mean performance with lower-tail reliability, identify bottleneck
+stages, and determine which observations or capabilities most expand the viable
+set.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F06: Joint success, lower-tail margin, bottleneck identity,
+and sensitivity to correlated terrain uncertainty.}
+\caption{Planned process-level reliability and uncertainty results.}
+\end{figure}
+
+\section{Verification and independent tests}
+% 理论验证：量纲、守恒、极限、解析例、数值收敛；参数识别与最终检验分离。
+% 留出不同载荷路径/地表分布/状态演化律，检验理论不是在已构造算例上自洽。
+% P2 实验最终可作为外部验证，但 P1 成稿时需明确实际可用的独立证据层级。
+\planned{Separate derivation checks, numerical verification, calibration, and
+independent predictive tests. Retain failed predictions and identify whether they
+arise from numerical error, an omitted state, or an invalid abstraction.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{P1-F07: Limiting cases, held-out paths or environment families,
+prediction intervals, and documented failures of the framework.}
+\caption{Planned tests of predictive value and domain of validity.}
+\end{figure}
+
+\section{Design implications and limits}
+% 输出给 P2：阶段能力、执行器/传感需求、转移条件、最需观测状态、设计点范围。
+% 不借此预选微棘/展开锚。说明忽略颗粒细节、接触律、热/真空等对结论的影响。
+\planned{Translate supported results into mechanism-independent design
+requirements for P2. State which variables are observable or estimable, which
+remain latent, and which conclusions require mechanism-specific validation.}
+
+\section{Completion and stop conditions}
+\planned{Proceed as an independent paper only if the framework produces
+non-trivial, falsifiable predictions beyond a sequence of safety factors. If the
+path formulation adds no predictive value over simple criteria, retain it as the
+theory section of P2 rather than forcing a separate manuscript.}
+
+\section*{Data and software availability}
+\planned{Archive derivations, canonical cases, solver code, configurations, and
+the claim--figure--run mapping before submission.}
+
+\ifBibliographyReady
+  \bibliographystyle{plain}
+  \bibliography{references}
+\else
+  \section*{References to verify}
+  Literature on asteroid anchoring, grasp stability, hybrid reachability,
+  viability, and reliability will be added only after the precise gap is verified.
+\fi
+
+\end{document}
