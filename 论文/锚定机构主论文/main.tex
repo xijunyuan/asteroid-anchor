@@ -1,0 +1,171 @@
+% !TeX program = pdflatex
+% !TeX encoding = UTF-8
+% AsteroidAnchor: the single confirmed, problem-driven mechanism paper.
+% Planning manuscript only. No failure mechanism, new design, simulation result,
+% experimental benefit, or asteroid-environment performance is established yet.
+%
+% Close the chain: documented difficulty -> conditions and cause -> targeted
+% structural/action change -> model and parameter choice -> matched comparison
+% and ablation -> validity range, costs, and failure boundary.
+% Theory, evaluation, state recognition, and adaptive actions are supporting
+% methods only when the selected problem requires them.
+%
+% Before drafting claims, freeze this sentence:
+% [Reference mechanism] under [terrain/contact/loading conditions] fails to
+% meet [mission requirement] because of [testable cause]. Evidence: [source].
+% Still uncertain: [alternative explanations and untested conditions].
+
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\setlength{\emergencystretch}{2em}
+
+\title{A Problem-Driven Anchoring Mechanism for Rubble-Pile Asteroids:\\
+Design, Mechanics, and Validation}
+\author{Authors to be confirmed}
+\date{Planning manuscript --- problem and evidence pending}
+
+\newcommand{\planned}[1]{\par\noindent\textit{Planned work: #1}\par}
+\newcommand{\figureplaceholder}[1]{%
+  \fbox{\parbox{0.91\linewidth}{\centering
+  \vspace{0.018\textheight}\textbf{Planned evidence --- no results yet}\par
+  \smallskip #1\par\vspace{0.018\textheight}}}}
+\newif\ifBibliographyReady
+\BibliographyReadyfalse
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is a planning manuscript for one mechanism-centered study of anchoring on
+rubble-pile asteroid surfaces. A specific unresolved difficulty, reference
+mechanism, and task condition will first be selected from verified literature
+and reproduction. The resulting design will target the diagnosed cause and be
+tested against the reference under matched mission requirements, including
+installation, post-installation load capacity, resource use, and failure modes.
+The mechanism and its performance have not yet been determined.
+\end{abstract}
+
+\section{Introduction: a documented anchoring problem}
+% Separate observed failures, untested conditions, authors' suggestions,
+% improvements already implemented, and subsequent publications.
+% Keep only literature needed to establish the selected problem and novelty.
+\planned{Review original and follow-up studies, choose one task-relevant and
+testable difficulty, and state the reference mechanism, terrain/contact/loading
+conditions, mission requirement, observed evidence, and remaining uncertainty.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{M-F01: Evidence map linking the selected failure, its test
+conditions, original figures/data, later fixes, and the unresolved gap.}
+\caption{Planned evidence and problem definition; no gap is established yet.}
+\end{figure}
+
+\section{Reference mechanism and cause of the difficulty}
+% Reproduce one decisive result where feasible. Preserve reference geometry,
+% boundary support, material, contact, loading, and reported uncertainty.
+% Compare observed failure modes with competing causal explanations.
+\planned{Reproduce or independently check a key reference result. Identify when
+the difficulty appears, examine the load and reaction paths, and test the most
+plausible cause against alternatives before proposing a new design.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{M-F02: Reference mechanism, installation and load paths,
+reproduced key result, onset conditions, and alternative cause tests.}
+\caption{Planned reference and causal diagnosis.}
+\end{figure}
+
+\section{Principle and design of the new mechanism}
+% Choose a change to structure or action that specifically interrupts the
+% diagnosed failure. Compare with the closest prior art at feature level.
+% Staging, bio-inspired geometry, sensing, and adaptive deployment are options.
+% Show where reaction force and torque close.
+\planned{Screen a small number of targeted concepts with minimal tests. Describe
+the chosen geometry, actuation sequence, reaction path, mass and power demands,
+and exact difference from the closest existing mechanism. State why the change
+should affect the measured failure.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{M-F03: New geometry, operation sequence, free-body diagrams,
+and the single structural or action change being tested.}
+\caption{Planned mechanism and its causal hypothesis.}
+\end{figure}
+
+\section{Mechanical model and parameter design}
+% Use only theory needed to explain this mechanism and choose its parameters.
+% Verify contact laws, numerical convergence and boundary conditions; calibrate
+% against independent component/material data, not final validation cases.
+\planned{Build and check the simplest model able to predict the selected
+difficulty and design change. Calibrate critical contact/material properties,
+identify parameter sensitivity, and select design values before final tests.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{M-F04: Model checks, calibrated quantities, predicted response,
+parameter sensitivities, and design choices with uncertainty.}
+\caption{Planned model credibility and parameter rationale.}
+\end{figure}
+
+\section{Matched comparison and mechanism tests}
+% Select the primary metric from the selected problem: installation reaction,
+% post-installation holding/deflection, deployment-plus-proof-load success, or
+% sensitivity to terrain. In every case test both installation and holding.
+% Match mission load, terrain, initial contact, support, allowed attempts, and
+% resource budgets. Count every attempt. Compare reference and ablated design.
+% Independent units are complete runs or separately prepared beds.
+\planned{Freeze task conditions, main metric, minimum meaningful improvement,
+failure classes, resource limits, repeats, and exclusions. Compare the reference,
+new mechanism, and a suitable ablation using independent simulation and physical
+tests. Report all attempts, uncertainty, costs, and failed outcomes.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{M-F05: Matched reference--new--ablation comparison of the
+selected primary metric, installation, holding, resources, and failure modes.}
+\caption{Planned evidence that the proposed change causes a useful improvement.}
+\end{figure}
+
+\section{Discussion, limits, and conclusion}
+% A better result in one condition does not establish universal adaptability.
+% Examine terrain, initial pose, load direction, duration, and low-gravity
+% transfer only to the extent supported by model and feasible tests.
+\planned{Map the conditions where the new mechanism helps, fails, or remains
+untested. Explain disagreements between prediction and experiment. Bound claims
+about vacuum and reduced gravity by the actual validation conditions.}
+
+\begin{figure}[htbp]
+\centering
+\figureplaceholder{M-F06: Applicable and failed regimes, performance--resource
+tradeoffs, and remaining extrapolation to asteroid conditions.}
+\caption{Planned validity and failure boundaries.}
+\end{figure}
+
+\section*{Completion criterion}
+\planned{Submit as one mechanism paper only when the problem is documented,
+the cause is supported, the design targets that cause, and matched independent
+comparisons establish the effect and its limits. Simulation setup, generic
+parameter scans, evaluation scores, and test-rig construction are supporting
+work unless they later produce a separately validated research question.}
+
+\section*{Data and software availability}
+\planned{Archive the screened literature evidence, reproduction inputs,
+model/calibration settings, CAD and prototype revisions, complete-run raw data,
+failures, and scripts that produce the final figures.}
+
+\ifBibliographyReady
+  \bibliographystyle{plain}
+  \bibliography{references}
+\else
+  \section*{References to verify}
+  Add only original publications and follow-up studies checked against their
+  source text. Bibliography output is disabled at the planning stage.
+\fi
+
+\end{document}
